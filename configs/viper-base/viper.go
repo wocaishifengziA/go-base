@@ -22,5 +22,8 @@ func main() {
 
 	viper.Debug()
 	fmt.Println("---------------")
-	fmt.Println(viper.Get("name"))
+	subViper := viper.Sub("db.info")
+
+	fmt.Println(subViper.Get("username"))
+
 }
