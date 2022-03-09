@@ -11,8 +11,8 @@ var name = pflag.StringP("name", "n", "", "help message for flagname")
 var age = pflag.Int64P("age", "a", 1234, "help message for flagname")
 
 func main() {
-	pflag.Parse()
-	viper.BindPFlags(pflag.CommandLine)
+	// pflag.Parse()
+	// viper.BindPFlags(pflag.CommandLine)
 
 	viper.SetConfigFile("./config.yaml")
 	err := viper.ReadInConfig()
